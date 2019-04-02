@@ -1,0 +1,4 @@
+The CMAC algorithm is designed using 35 weights, which are trained to get a desired results.
+The data set of 100 points is collected from a sine curve, from which 30 of them chosoen randomly are assigned for testing and remaining 70 are for training.
+The no.of times the CMAC weight vector is trained depends on how desired the output is.
+As there are 70 training as 35 weights, each weight corresponds to two of the training data. That is for every two adjacent input training data we update the same vector.
