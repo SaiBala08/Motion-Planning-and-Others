@@ -1,0 +1,391 @@
+<robot
+  name="Assem Baxter Arm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="6.27290549892745E-07 -5.63785129692462E-17 0.0600789194109741"
+        rpy="0 0 0" />
+      <mass
+        value="0.108634140457193" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="-0.0137838155360258 -0.192014712030932 -0.000179255782037036"
+        rpy="0 0 0" />
+      <mass
+        value="6.74017191393452" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.294117647058824 0.294117647058824 0.294117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rev_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.45037"
+      rpy="1.5708 0 -0.14235" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.05"
+      upper="1.05"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="0.0213480003478436 0.0233853765302652 -1.79291193697084E-06"
+        rpy="0 0 0" />
+      <mass
+        value="3.85930938341698" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.694117647058824 0.0941176470588235 0.0941176470588235 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rev_2"
+    type="revolute">
+    <origin
+      xyz="0.069517 -0.073672 0"
+      rpy="1.3878E-17 -6.9389E-16 -0.37283" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.05"
+      upper="1.05"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_3">
+    <inertial>
+      <origin
+        xyz="0.180948733354966 0.196639598351692 3.23709834858243E-06"
+        rpy="0 0 0" />
+      <mass
+        value="5.67757578474303" />
+      <inertia
+        ixx="0.000826258056227662"
+        ixy="-0.00032476674144363"
+        ixz="7.60127513239401E-09"
+        iyy="0.00018144740125699"
+        iyz="4.20971523446177E-09"
+        izz="0.000920167160587583" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.4" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rev_3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.4092 -0.82436 0.71181" />
+    <parent
+      link="Link_2" />
+    <child
+      link="Link_3" />
+    <axis
+      xyz="0.67422 0.73853 0" />
+    <limit
+      lower="-1.05"
+      upper="1.05"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_4">
+    <inertial>
+      <origin
+        xyz="0.00875954850305532 0.00895455032989986 3.98461506050107E-06"
+        rpy="0 0 0" />
+      <mass
+        value="2.99754023199999" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.294117647058824 0.294117647058824 0.294117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rev_4"
+    type="revolute">
+    <origin
+      xyz="0.32552 0.2264 0"
+      rpy="-1.1588E-15 -2.6888E-15 0.56804" />
+    <parent
+      link="Link_3" />
+    <child
+      link="Link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.05"
+      upper="1.05"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_5">
+    <inertial>
+      <origin
+        xyz="0.159843474272183 0.163316863567474 -3.85776355836531E-06"
+        rpy="0 0 0" />
+      <mass
+        value="3.83179742386749" />
+      <inertia
+        ixx="3.51804667808823E-05"
+        ixy="4.22724755498238E-05"
+        ixz="1.95670087016732E-10"
+        iyy="5.07941580282365E-05"
+        iyz="-1.6284272228332E-10"
+        izz="8.59746248076112E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.694117647058824 0.0941176470588235 0.0941176470588235 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rev_5"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="2.8325 0.30152 1.5455" />
+    <parent
+      link="Link_4" />
+    <child
+      link="Link_5" />
+    <axis
+      xyz="0.69928 0.71485 0" />
+    <limit
+      lower="-1.05"
+      upper="1.05"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_6">
+    <inertial>
+      <origin
+        xyz="0.132026544361187 0.118138535653151 -3.50450496602872E-06"
+        rpy="0 0 0" />
+      <mass
+        value="3.84569235681838" />
+      <inertia
+        ixx="0.0430793180196791"
+        ixy="-0.0516544886740401"
+        ixz="4.47586195988225E-08"
+        iyy="0.0619365933082107"
+        iyz="3.73282333706454E-08"
+        izz="0.105015911327825" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.294117647058824 0.294117647058824 0.294117647058824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem Baxter Arm/meshes/Link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rev_6"
+    type="revolute">
+    <origin
+      xyz="0.28686 0.27501 0"
+      rpy="1.1102E-16 9.7145E-16 0.43335" />
+    <parent
+      link="Link_5" />
+    <child
+      link="Link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.05"
+      upper="1.05"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
